@@ -8,12 +8,13 @@ public class LinearSpritesSpawner2D : MonoBehaviour {
     public float StartPositionY;
     public float gapAnchorX;
     public float gapAnchorY;
+    public int iteration;
 
     // Use this for spawning
     void Start()
     {
         Vector2 spritePosition = new Vector2(startPositionX, StartPositionY);
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < iteration; i++)
         {
             GameObject.Instantiate(spriteToDuplicate, spritePosition, Quaternion.identity);
             spritePosition += new Vector2(gapAnchorX, gapAnchorY);
