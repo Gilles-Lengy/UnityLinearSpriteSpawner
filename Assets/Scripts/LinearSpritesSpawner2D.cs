@@ -19,5 +19,6 @@ public class LinearSpritesSpawner2D : MonoBehaviour {
             GameObject.Instantiate(spriteToDuplicate, spritePosition, Quaternion.identity);
             spritePosition += new Vector2(gapAnchorX, gapAnchorY);
         }
+        Destroy(spriteToDuplicate);
     }
 }
